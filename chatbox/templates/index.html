@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Image Generation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>ChatGPT Image Generation</h1>
+    <form id="prompt-form">
+        <label for="prompt">Enter prompt:</label>
+        <input type="text" id="prompt" name="prompt" required>
+        <button type="submit">Generate Image</button>
+    </form>
+    <div id="result">
+        <img id="generated-image" src="" alt="" style="display:none;">
+    </div>
+    <script>
+        $('#prompt-form').on('submit', function(e) {
+            e.preventDefault();
+
+            const promptText = $('#prompt').val();
+
+            $.post('/generate-image', {prompt: promptText}, function(data) {
+                if (data.url) {
+                    $('#generated-image').attr('src', data.url).show();
+                } else {
+                    alert(data.error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
