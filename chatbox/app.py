@@ -10,7 +10,7 @@ def index():
 @app.route('/generate-image', methods=['POST'])
 def generate_image():
     # Replace 'your_api_key' with your actual API key
-    api_key = "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"
+    api_key = "REMOVED_REMOVED_SENSITIVE_DATA"
     prompt_text = request.form['prompt']
 
     # Define the API endpoint
