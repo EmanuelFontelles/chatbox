@@ -11,21 +11,21 @@ This repository contains a simple web app that sends a request to the ChatGPT Im
 
 1. Clone this repository:
 
-\```
+```
 git clone https://github.com/yourusername/chatgpt-image-generation-webapp.git
-\```
+```
 
 2. Navigate to the project directory:
 
-\```
+```
 cd chatgpt-image-generation-webapp
-\```
+```
 
 3. Install the required packages:
 
-\```
+```
 pip install -r requirements.txt
-\```
+```
 
 ## Usage
 
@@ -33,9 +33,9 @@ pip install -r requirements.txt
 
 2. Start the Flask app:
 
-\```
+```
 python app.py
-\```
+```
 
 3. Open your browser and navigate to `http://127.0.0.1:5000/`.
 
